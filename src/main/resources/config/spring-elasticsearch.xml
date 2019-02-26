@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+    <bean id="SoftwareInfoIndexType" class="com.sun.tools.javac.util.Pair">
+        <constructor-arg><value>你的index</value></constructor-arg>
+        <constructor-arg><value>你的type</value></constructor-arg>
+    </bean>
+
+    <bean id="esJavaClient" class="com.yueny.example.elasticsearch.es.service.impl.EsJavaClient">
+        <property name="serverName" value="${esclient.serverName}"></property>
+        <property name="port" value="${esclient.port}"></property>
+        <property name="clusterName" value="${esclient.clusterName}"></property>
+        <property name="indexInfos">
+            <map>
+                <entry key="com.yueny.example.elasticsearch.es.model.LogModel" value-ref="SoftwareInfoIndexType"></entry>
+            </map>
+        </property>
+    </bean>
+    -->
+
+</beans>
