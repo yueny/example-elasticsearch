@@ -4,7 +4,6 @@ import com.yueny.rapid.lang.thread.hook.ShutdownHookService;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.elasticsearch.search.highlight.HighlightBuilder;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -17,18 +16,18 @@ import java.net.UnknownHostException;
 public class EsJavaConfig {
 
     //es服务器地址
-//    @Value("${server.name}")
+//    @Value("${es.server.name}")
 //    private String serverName;
 
-    @Value("${cluster.name}")
-    private String clusterName;
+//    @Value("${es.cluster.name}")
+    private String clusterName = "muzinuo";
 
     //es服务器名称
-    @Value("${server.address)")
-    private String serverAddress;
+    //@Value("${es.server.address)")
+    private String serverAddress = "127.0.0.1";
     //es服务器端口
-    @Value("${server.port}")
-    private int serverPort;
+    //@Value("${es.server.port}")
+    private int serverPort = 9200;
 
     @Bean
     public TransportClient esClient() throws UnknownHostException {

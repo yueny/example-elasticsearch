@@ -22,7 +22,8 @@
 
 		<yueny.rapid.latest.version>1.0.1-SNAPSHOT</yueny.rapid.latest.version>
 
-		<elasticsearch.version>6.6.1</elasticsearch.version>
+		<elasticsearch.client.version>6.6.1</elasticsearch.client.version>
+
 	</properties>
 
 	<dependencyManagement>
@@ -35,14 +36,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -52,18 +45,24 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 
-		<!-- elasticsearch
+		<!-- elasticsearch -->
 		<dependency>
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
-			<version>${elasticsearch.version}</version>
+			<version>${elasticsearch.client.version}</version>
 		</dependency>
-		 -->
+
 		<!-- elasticsearch client -->
 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>transport</artifactId>
-			<version>${elasticsearch.version}</version>
+			<version>${elasticsearch.client.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.elasticsearch</groupId>
+					<artifactId>elasticsearch</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
         <dependency>
